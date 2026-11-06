@@ -1,3 +1,5 @@
+# Data is downloaded by a script and must not be committed (see README)
+data/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
