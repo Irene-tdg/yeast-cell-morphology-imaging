@@ -1,9 +1,9 @@
 """Download the YeaZ phase-contrast dataset (Dietler et al., 2020)."""
 
+import tarfile
 from pathlib import Path
 
 import gdown
-import tarfile 
 
 # Google Drive ID of the YeaZ phase-contrast training set.
 # Source: https://www.epfl.ch/labs/lpbs/data-and-software/
@@ -14,7 +14,7 @@ raw_dir = Path("data") / "raw"
 raw_dir.mkdir(parents=True, exist_ok=True)
 
 archive_path = raw_dir / "gold-standard-PhC-plus-2.tar.gz"
-extracted_dir=raw_dir / "gold-standard-PhC-plus-2"
+extracted_dir = raw_dir / "gold-standard-PhC-plus-2"
 
 
 if archive_path.exists():
@@ -31,6 +31,3 @@ else:
         tar.extractall(path=raw_dir, filter="data")
 
 print("Done. Images are in", extracted_dir)
-
-
-
